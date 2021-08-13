@@ -1,19 +1,180 @@
 body {
   font-family: sans-serif;
   padding: 20px;
+  font-family: "Hind Siliguri", sans-serif;
+  background-color: #799de0;
 }
 
 * {
   margin: 0;
   padding: 0;
   color: #0d0d0d;
+  text-align: center;
 }
+
 main {
   margin: auto;
   display: flex;
 }
-#container {
-  width: 100vw;
-  height:  100vh;
+
+header {
+  width: 90%;
+  margin: auto;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+  flex-wrap: wrap;
 }
 
+
+#logoschool {
+  margin: 0;
+}
+
+h1 {
+  font-weight: 700;
+  color: #ffffff;
+  font-size: 3em;
+
+}
+
+strong {
+  font-weight: 800;
+  color: #d80032;
+}
+
+form {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+form input {
+  background-color: #ffffff;
+  border-radius: 7px 0 0 7px;
+  padding: 10px 15px;
+  border: none;
+  font-size: 16px;
+}
+
+::-webkit-input-placeholder {
+  color: #2b2d42;
+}
+
+::-moz-placeholder {
+  color: #2b2d42;
+}
+
+form button {
+  background-color: #ffffff;
+  border-radius: 0 7px 7px 0;
+  padding: 0 10px;
+  border: none;
+  cursor: pointer;
+}
+
+form button span {
+  color: #2b2d42;
+}
+
+#most-liked-button {
+  text-align: center;
+  background-color: #ec1c4d;
+  color: #ffffff;
+  border-radius: 6PX;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  font-size: 1em;
+  box-shadow: black 2px 2px;
+}
+
+
+#articles-container {
+  width: 50%;
+  margin: auto;
+  margin-top: 80px;
+  display: flex;
+  flex-direction: column;
+}
+
+#title-container {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  align-items: center;
+}
+
+#title-container div {
+  display: flex;
+}
+
+article {
+  background-color: #ffffff;
+  filter: drop-shadow(6px 6px 12px rgba(0, 0, 0, 0.44));
+  padding: 30px 40px;
+  border-radius: 20px;
+  margin-bottom: 50px;
+}
+
+article h2 {
+  font-size: 30px;
+}
+
+#date-container {
+  display: flex;
+  align-items: center;
+  font-size: 20px;
+}
+
+#date-container>p {
+  margin-right: 30px;
+}
+
+#date-container div {
+  display: flex;
+  align-items: center;
+}
+
+#heart>span {
+
+
+  margin-left: 5px;
+  color: #ea0015;
+  cursor: pointer;
+}
+
+#heart {
+  display: flex;
+  padding-left: 90%;
+}
+
+he #info-container {
+  width: 100%;
+}
+
+#info-container div {
+  width: 40%;
+  float: left;
+  margin-right: 20px;
+}
+
+#info-container div img {
+  width: 100%;
+}
+
+footer {
+  width: 50%;
+  margin: auto;
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+}
+
+footer p {
+  color: #ffffff;
+  font-size: 18px;
+}
