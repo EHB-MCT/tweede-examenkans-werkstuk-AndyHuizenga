@@ -1,4 +1,6 @@
 "use strict";
+
+data();
 class Article {
     constructor(id, title, content, imageURI, likes, datum) {
         this.id = id;
@@ -11,8 +13,16 @@ class Article {
 }
 
 let articlesArray = [];
+let mostLikedButton = document.getElementById("most-liked-button");
 
-data();
+function init() {
+    render();
+    mostLikedButton.addEventListener("click", (e) => {
+        e.preventDefault();
+        mostLikedSort();
+        render();
+    });
+}
 
 async function data() {
     await fetch("https://thecrew.cc/news/read.php")
@@ -30,7 +40,7 @@ async function data() {
                     )
                 );
             });
-            render();
+            init();
         });
 }
 
@@ -60,4 +70,10 @@ function render() {
       `;
     });
     articlesContainer.innerHTML = htmlString;
+}
+
+function mostLikedSort() {
+    articlesArray.sort((a, b) => {
+        return b.likes - a.likes;
+    });
 }
