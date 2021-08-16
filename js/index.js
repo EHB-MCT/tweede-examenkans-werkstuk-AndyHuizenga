@@ -36,7 +36,7 @@ async function data() {
         .then((response) => response.json())
         .then((data) => {
             data.news.forEach((article) => {
-                articlesArray.push( 
+                articlesArray.push(
                     new Article(
                         article.UUID,
                         article.title,
@@ -97,4 +97,13 @@ function mostLikedSort() {
     articlesArray.sort((a, b) => {
         return b.likes - a.likes;
     });
+}
+
+function updateLike(articleId) {
+    fetch("https://thecrew.cc/news/read.php", {
+        method: "POST",
+        body: JSON.stringify({
+            UUID: [articleId],
+        }),
+    }).then((res) => console.log(res));
 }
