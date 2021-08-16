@@ -28,7 +28,6 @@ header {
   flex-wrap: wrap;
 }
 
-
 #logoschool {
   margin: 0;
 }
@@ -90,7 +89,6 @@ form button span {
   box-shadow: black 2px 2px;
 }
 
-
 #articles-container {
   width: 50%;
   margin: auto;
@@ -127,7 +125,7 @@ article h2 {
 #date-container {
   display: flex;
   align-items: center;
-  font-size: 20px;
+
 }
 
 #date-container>p {
@@ -140,8 +138,6 @@ article h2 {
 }
 
 #heart>span {
-
-
   margin-left: 5px;
   color: #ea0015;
   cursor: pointer;

@@ -36,7 +36,7 @@ async function data() {
         .then((response) => response.json())
         .then((data) => {
             data.news.forEach((article) => {
-                articlesArray.push(
+                articlesArray.push( 
                     new Article(
                         article.UUID,
                         article.title,
@@ -51,10 +51,10 @@ async function data() {
         });
 }
 
-function render() {
+function render(data) {
     let articlesContainer = document.getElementById("articles-container");
     let htmlString = "";
-    articlesArray.forEach((article) => {
+    data.forEach((article) => {
         htmlString += `
     <article>
     <div id='title-container'>
