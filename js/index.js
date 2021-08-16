@@ -14,13 +14,20 @@ class Article {
 
 let articlesArray = [];
 let mostLikedButton = document.getElementById("most-liked-button");
+let form = document.getElementById("form");
+let input = document.getElementById("form-input");
 
 function init() {
-    render();
+    render(articlesArray);
+
+    form.addEventListener("submit", (e) => {
+        e.preventDefault();
+        searchBar();
+    });
     mostLikedButton.addEventListener("click", (e) => {
         e.preventDefault();
         mostLikedSort();
-        render();
+        render(articlesArray);
     });
 }
 
@@ -70,6 +77,20 @@ function render() {
       `;
     });
     articlesContainer.innerHTML = htmlString;
+}
+
+function searchBar() {
+    let searchedKeyword = input.value;
+    let newArray = [];
+    articlesArray.forEach((article) => {
+        if (
+            article.title.includes(searchedKeyword) ||
+            article.content.includes(searchedKeyword)
+        ) {
+            newArray.push(article);
+        }
+    });
+    render(newArray);
 }
 
 function mostLikedSort() {
